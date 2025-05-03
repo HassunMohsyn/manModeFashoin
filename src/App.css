@@ -1,38 +1,181 @@
+@font-face {
+  font-family: 'BeatriceDeckTRIAL';
+  src: url('./assets/fonts/Beatrice-Font-Family/BeatriceDeckTRIAL-Extrabold-BF64829e919604b.ttf') format('truetype');
+  font-weight: 800; /* Extrabold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BeatriceDeckTRIAL';
+  src: url('./assets/fonts/Beatrice-Font-Family/BeatriceDeckTRIAL-Medium-BF64829e9193070.ttf') format('truetype');
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BeatriceDeckTRIAL';
+  src: url('./assets/fonts/Beatrice-Font-Family/BeatriceDeckTRIAL-Regular-BF64829e9182459.ttf') format('truetype');
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BeatriceDeckTRIAL';
+  src: url('./assets/fonts/Beatrice-Font-Family/BeatriceDeckTRIAL-Thin-BF64829e8e21d70.otf') format('truetype');
+  font-weight: 100; /* Thin */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BeatriceHeadlineTRIAL';
+  src: url('./assets/fonts/Beatrice-Font-Family/BeatriceHeadlineTRIAL-Medium-BF64829e9033603.ttf') format('truetype');
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BeatriceTRIAL';
+  src: url('./assets/fonts/Beatrice-Font-Family/BeatriceTRIAL-Bold-BF64829e8fd7dc6.ttf') format('truetype');
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BeatriceTRIAL';
+  src: url('./assets/fonts/Beatrice-Font-Family/BeatriceTRIAL-Light-BF64829e8f87d4e.ttf') format('truetype');
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BeatriceTRIAL';
+  src: url('./assets/fonts/Beatrice-Font-Family/BeatriceTRIAL-Medium-BF64829e8f63463.ttf') format('truetype');
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BeatriceTRIAL';
+  src: url('./assets/fonts/Beatrice-Font-Family/BeatriceTRIAL-Regular-BF64829e8f591fb.ttf') format('truetype');
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'BeatriceTRIAL', sans-serif;
+  
+}
+
+h1 {
+  font-family: 'BeatriceHeadlineTRIAL', serif;
+  font-weight: 500;
+}
+
+p {
+  font-family: 'BeatriceDeckTRIAL', serif;
+  font-weight: 400;
+}
+
+
 .App {
-  text-align: center;
+  background: url(./assets/images/picture/noisy_bg_Page2.png);
+  background-size: cover;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a,li{
+  text-decoration: none !important;
+  font-family: 'BeatriceDeckTRIAL', sans-serif;
+  color: #000;
+  font-style: regular;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body{
+  font-family: 'BeatriceDeckTRIAL', sans-serif;
+  font-style: regular;
+}
+@media  (max-width: 768px) {
+  #cart,#fav,#list{
+    display: none !important;
   }
 }
+.header{
+  background: url('./assets/images/picture/noisy_bg_Page2.png');
+  background-size: cover;
+  z-index: 3;
+  position: relative;
+}
+.sort-list ul{
+  background: url('./assets/images/picture/noisy_bg_Page2.png');
+  background-size: cover;
+}
+.page{
+  height: calc(100vh);
+}
+.custom-swiper {
+  position: relative;
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.custom-swiper .swiper-button-prev,
+.custom-swiper .swiper-button-next {
+  bottom: -30px; /* Move buttons below the slider */
+  top: auto;
+  transform: none;
+  /* background-color: #000; */
+  color: #000;
+  z-index: 100000;
+  cursor: pointer;
+}
+
+.custom-swiper .swiper-button-prev {
+   left: 40%;/* Adjust position */
+}
+
+.custom-swiper .swiper-button-next {
+  right: 40%; /* Adjust position */
+}
+.card{
+  background-color: transparent !important;
+  border: 0 !important;
+  padding: 0 !important;
+}
+.card img {
+  margin: 0 !important;
+}
+.plusButton {
+  position: absolute;
+  border: 0;
+  outline: none;
+  bottom: 90px;
+  left: 50%;
+  font-size: 35px;
+  background-color: #dcdcdcbd;
+  color: #0C0C0C;
+  width: 40px;
+  height: 40px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  transform: translateX(-50%);
 }
-
-.App-link {
-  color: #61dafb;
+.nav-prod{
+  border-bottom: 2px solid #DFDFDF ;
+  margin-bottom: 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.products-page .filter-list li h1 {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+.products-page .filter-list li{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+  padding: 10px 0;
+}
+.products-page .filter-list button{
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  outline: 0;
+  padding: 2px;
+  width: 40px;
 }
